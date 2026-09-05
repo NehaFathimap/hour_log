@@ -1,0 +1,79 @@
+{
+  "client": "Sample Client Acme Corp",
+  "purchased_blocks": [
+    {
+      "name": "PB-00001",
+      "purchase_date": "2026-01-01",
+      "expiry_date": "2026-01-31",
+      "hours_purchased": 4,
+      "reference": "PB-A: Jan block, expires end of Jan"
+    },
+    {
+      "name": "PB-00002",
+      "purchase_date": "2026-01-01",
+      "expiry_date": "2026-03-31",
+      "hours_purchased": 6,
+      "reference": "PB-B: Q1 block, plenty of runway"
+    },
+    {
+      "name": "PB-00006",
+      "purchase_date": "2026-02-10",
+      "expiry_date": "2026-02-20",
+      "hours_purchased": 5,
+      "reference": "PB-C: bought Feb 10th (after PB-A/PB-B) but expires Feb 20th, earlier than PB-B"
+    },
+    {
+      "name": "PB-00015",
+      "purchase_date": "2026-03-01",
+      "expiry_date": "2026-03-10",
+      "hours_purchased": 2,
+      "reference": "PB-D: small block, expires early March"
+    }
+  ],
+  "consumption_entries_in_insertion_order": [
+    {
+      "name": "CE-00003",
+      "worked_on": "2026-01-15",
+      "hours": 3,
+      "description": "Week 1 consulting"
+    },
+    {
+      "name": "CE-00004",
+      "worked_on": "2026-01-31",
+      "hours": 2,
+      "description": "Month-end work, logged on the expiry date itself"
+    },
+    {
+      "name": "CE-00007",
+      "worked_on": "2026-02-15",
+      "hours": 7,
+      "description": "Big February engagement"
+    },
+    {
+      "name": "CE-00008",
+      "worked_on": "2026-02-16",
+      "hours": 0,
+      "description": "Kickoff call, no billable hours"
+    },
+    {
+      "name": "CE-00010",
+      "worked_on": "2026-02-18",
+      "hours": -3,
+      "description": "Correction: over-logged by 3h",
+      "reverses": "CE-00007"
+    },
+    {
+      "name": "CE-00012",
+      "worked_on": "2026-01-20",
+      "hours": 1,
+      "description": "Retroactive: forgot to log this at the time",
+      "note": "inserted LAST, but worked_on=2026-01-20 lands chronologically between ce1 and ce2"
+    },
+    {
+      "name": "CE-00016",
+      "worked_on": "2026-03-05",
+      "hours": 10,
+      "description": "More work than every remaining unexpired block can cover"
+    }
+  ]
+}

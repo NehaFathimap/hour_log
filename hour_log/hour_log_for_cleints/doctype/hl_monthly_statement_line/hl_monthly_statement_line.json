@@ -1,0 +1,90 @@
+{
+ "actions": [],
+ "creation": "2026-09-05 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "worked_on",
+  "consumption_entry",
+  "purchased_block",
+  "block_expiry_date",
+  "hours_allocated",
+  "sequence",
+  "is_correction",
+  "is_overdraft"
+ ],
+ "fields": [
+  {
+   "fieldname": "worked_on",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Worked On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "consumption_entry",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Consumption Entry",
+   "options": "HL Consumption Entry",
+   "read_only": 1
+  },
+  {
+   "fieldname": "purchased_block",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Purchased Block",
+   "options": "HL Purchased Block",
+   "read_only": 1
+  },
+  {
+   "fieldname": "block_expiry_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Block Expiry Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "hours_allocated",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Hours Allocated",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sequence",
+   "fieldtype": "Int",
+   "label": "Sequence",
+   "read_only": 1
+  },
+  {
+   "fieldname": "is_correction",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Correction",
+   "read_only": 1
+  },
+  {
+   "description": "This row is the unmet shortfall of the entry (no unexpired block could cover it), not a draw from purchased_block.",
+   "fieldname": "is_overdraft",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Overdraft",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-09-05 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Hour log for cleints",
+ "name": "HL Monthly Statement Line",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
