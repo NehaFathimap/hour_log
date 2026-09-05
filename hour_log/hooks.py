@@ -12,6 +12,12 @@ app_license = "mit"
 # Customer doctype, so ERPNext must be installed before hour_log.
 required_apps = ["erpnext"]
 
+# "Generate All Statements" button on the HL Monthly Statement list view.
+# Needs `bench build --app hour_log` after install/update.
+doctype_list_js = {
+	"HL Monthly Statement": "public/js/hl_monthly_statement_list.js",
+}
+
 # Each item in the list will be shown as an app in the apps page
 # add_to_apps_screen = [
 # 	{
