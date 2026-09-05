@@ -1,10 +1,8 @@
 {
  "actions": [],
- "allow_rename": 0,
  "autoname": "hash",
- "creation": "2026-09-05 00:00:00.000000",
+ "creation": "2026-09-05 00:00:00",
  "doctype": "DocType",
- "document_type": "",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
@@ -53,7 +51,6 @@
    "fieldtype": "Column Break"
   },
   {
-   "description": "Snapshot of the block's expiry date at allocation time, for a stable history even though blocks are also immutable once used.",
    "fieldname": "block_expiry_date",
    "fieldtype": "Date",
    "in_list_view": 1,
@@ -78,6 +75,7 @@
    "read_only": 1
   },
   {
+   "default": "0",
    "description": "Checked when this row is the unmet shortfall of a consumption entry (no unexpired block could cover it), not a draw from purchased_block.",
    "fieldname": "is_overdraft",
    "fieldtype": "Check",
@@ -89,25 +87,22 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-09-05 00:00:00.000000",
+ "modified": "2026-09-05 13:47:55.664378",
  "modified_by": "Administrator",
  "module": "Hour log for cleints",
  "name": "HL Allocation",
  "owner": "Administrator",
  "permissions": [
   {
-   "create": 0,
-   "delete": 0,
    "email": 1,
    "export": 1,
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "System Manager",
-   "share": 0,
-   "write": 0
+   "role": "System Manager"
   }
  ],
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

@@ -30,3 +30,31 @@ def statement_history(client: str, year, month):
 	if not frappe.has_permission("HL Monthly Statement", "read"):
 		frappe.throw(_("Not permitted."), frappe.PermissionError)
 	return get_statement_history(client, year, month)
+
+
+@frappe.whitelist()
+def generate_all_statements(year, month):
+	"""Public endpoint: (re)generate the statement for every client that has any
+	source data (a Purchased Block or a Consumption Entry), for one period - so
+	whoever runs this doesn't have to generate client-by-client. Each client is
+	independent and safe to retry: see generate_monthly_statement.
+	"""
+	if not frappe.has_permission("HL Monthly Statement", "read"):
+		frappe.throw(_("Not permitted."), frappe.PermissionError)
+
+	clients = set(frappe.get_all("HL Purchased Block", pluck="client")) | set(
+		frappe.get_all("HL Consumption Entry", pluck="client")
+	)
+
+	generated, failed = [], []
+	for client in sorted(clients):
+		try:
+			generate_monthly_statement(client, year, month)
+			generated.append(client)
+		except Exception:
+			frappe.log_error(
+				title="Generate All Statements", message=frappe.get_traceback()
+			)
+			failed.append(client)
+
+	return {"generated": generated, "failed": failed}
