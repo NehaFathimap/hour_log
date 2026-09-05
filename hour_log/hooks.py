@@ -8,7 +8,9 @@ app_license = "mit"
 # Apps
 # ------------------
 
-# required_apps = []
+# HL Purchased Block / HL Consumption Entry link "client" to the core ERPNext
+# Customer doctype, so ERPNext must be installed before hour_log.
+required_apps = ["erpnext"]
 
 # Each item in the list will be shown as an app in the apps page
 # add_to_apps_screen = [

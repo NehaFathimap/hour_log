@@ -1,0 +1,334 @@
+{
+  "january_statement_history": [
+    {
+      "name": "STMT-00005",
+      "client": "Sample Client Acme Corp",
+      "year": 2026,
+      "month": 1,
+      "revision": 1,
+      "is_latest": 0,
+      "previous_revision": null,
+      "superseded_by": "STMT-00014",
+      "opening_balance_hours": 0.0,
+      "hours_purchased_in_month": 10.0,
+      "total_consumed_hours": 5.0,
+      "hours_expired_unused_in_month": 0.0,
+      "closing_balance_hours": 5.0,
+      "overdraft_hours": 0.0,
+      "notes": "Initial statement, generated from source data.",
+      "lines": [
+        {
+          "worked_on": "2026-01-15",
+          "consumption_entry": "CE-00003",
+          "purchased_block": "PB-00001",
+          "block_expiry_date": "2026-01-31",
+          "hours_allocated": 3.0,
+          "sequence": 1,
+          "is_correction": 0,
+          "is_overdraft": 0
+        },
+        {
+          "worked_on": "2026-01-31",
+          "consumption_entry": "CE-00004",
+          "purchased_block": "PB-00001",
+          "block_expiry_date": "2026-01-31",
+          "hours_allocated": 1.0,
+          "sequence": 1,
+          "is_correction": 0,
+          "is_overdraft": 0
+        },
+        {
+          "worked_on": "2026-01-31",
+          "consumption_entry": "CE-00004",
+          "purchased_block": "PB-00002",
+          "block_expiry_date": "2026-03-31",
+          "hours_allocated": 1.0,
+          "sequence": 2,
+          "is_correction": 0,
+          "is_overdraft": 0
+        }
+      ]
+    },
+    {
+      "name": "STMT-00014",
+      "client": "Sample Client Acme Corp",
+      "year": 2026,
+      "month": 1,
+      "revision": 2,
+      "is_latest": 1,
+      "previous_revision": "STMT-00005",
+      "superseded_by": null,
+      "opening_balance_hours": 0.0,
+      "hours_purchased_in_month": 10.0,
+      "total_consumed_hours": 6.0,
+      "hours_expired_unused_in_month": 0.0,
+      "closing_balance_hours": 4.0,
+      "overdraft_hours": 0.0,
+      "notes": "Supersedes revision 1: recomputed from source data because underlying consumption changed for this period.",
+      "lines": [
+        {
+          "worked_on": "2026-01-15",
+          "consumption_entry": "CE-00003",
+          "purchased_block": "PB-00001",
+          "block_expiry_date": "2026-01-31",
+          "hours_allocated": 3.0,
+          "sequence": 1,
+          "is_correction": 0,
+          "is_overdraft": 0
+        },
+        {
+          "worked_on": "2026-01-20",
+          "consumption_entry": "CE-00012",
+          "purchased_block": "PB-00001",
+          "block_expiry_date": "2026-01-31",
+          "hours_allocated": 1.0,
+          "sequence": 1,
+          "is_correction": 0,
+          "is_overdraft": 0
+        },
+        {
+          "worked_on": "2026-01-31",
+          "consumption_entry": "CE-00004",
+          "purchased_block": "PB-00002",
+          "block_expiry_date": "2026-03-31",
+          "hours_allocated": 2.0,
+          "sequence": 1,
+          "is_correction": 0,
+          "is_overdraft": 0
+        }
+      ]
+    }
+  ],
+  "february_statement_history": [
+    {
+      "name": "STMT-00009",
+      "client": "Sample Client Acme Corp",
+      "year": 2026,
+      "month": 2,
+      "revision": 1,
+      "is_latest": 0,
+      "previous_revision": null,
+      "superseded_by": "STMT-00011",
+      "opening_balance_hours": 5.0,
+      "hours_purchased_in_month": 5.0,
+      "total_consumed_hours": 7.0,
+      "hours_expired_unused_in_month": 0.0,
+      "closing_balance_hours": 3.0,
+      "overdraft_hours": 0.0,
+      "notes": "Initial statement, generated from source data.",
+      "lines": [
+        {
+          "worked_on": "2026-02-15",
+          "consumption_entry": "CE-00007",
+          "purchased_block": "PB-00006",
+          "block_expiry_date": "2026-02-20",
+          "hours_allocated": 5.0,
+          "sequence": 1,
+          "is_correction": 0,
+          "is_overdraft": 0
+        },
+        {
+          "worked_on": "2026-02-15",
+          "consumption_entry": "CE-00007",
+          "purchased_block": "PB-00002",
+          "block_expiry_date": "2026-03-31",
+          "hours_allocated": 2.0,
+          "sequence": 2,
+          "is_correction": 0,
+          "is_overdraft": 0
+        }
+      ]
+    },
+    {
+      "name": "STMT-00011",
+      "client": "Sample Client Acme Corp",
+      "year": 2026,
+      "month": 2,
+      "revision": 2,
+      "is_latest": 0,
+      "previous_revision": "STMT-00009",
+      "superseded_by": "STMT-00013",
+      "opening_balance_hours": 5.0,
+      "hours_purchased_in_month": 5.0,
+      "total_consumed_hours": 4.0,
+      "hours_expired_unused_in_month": 1.0,
+      "closing_balance_hours": 5.0,
+      "overdraft_hours": 0.0,
+      "notes": "Supersedes revision 1: recomputed from source data because underlying consumption changed for this period.",
+      "lines": [
+        {
+          "worked_on": "2026-02-15",
+          "consumption_entry": "CE-00007",
+          "purchased_block": "PB-00006",
+          "block_expiry_date": "2026-02-20",
+          "hours_allocated": 5.0,
+          "sequence": 1,
+          "is_correction": 0,
+          "is_overdraft": 0
+        },
+        {
+          "worked_on": "2026-02-15",
+          "consumption_entry": "CE-00007",
+          "purchased_block": "PB-00002",
+          "block_expiry_date": "2026-03-31",
+          "hours_allocated": 2.0,
+          "sequence": 2,
+          "is_correction": 0,
+          "is_overdraft": 0
+        },
+        {
+          "worked_on": "2026-02-18",
+          "consumption_entry": "CE-00010",
+          "purchased_block": "PB-00002",
+          "block_expiry_date": "2026-03-31",
+          "hours_allocated": -2.0,
+          "sequence": 1,
+          "is_correction": 1,
+          "is_overdraft": 0
+        },
+        {
+          "worked_on": "2026-02-18",
+          "consumption_entry": "CE-00010",
+          "purchased_block": "PB-00006",
+          "block_expiry_date": "2026-02-20",
+          "hours_allocated": -1.0,
+          "sequence": 2,
+          "is_correction": 1,
+          "is_overdraft": 0
+        }
+      ]
+    },
+    {
+      "name": "STMT-00013",
+      "client": "Sample Client Acme Corp",
+      "year": 2026,
+      "month": 2,
+      "revision": 3,
+      "is_latest": 1,
+      "previous_revision": "STMT-00011",
+      "superseded_by": null,
+      "opening_balance_hours": 4.0,
+      "hours_purchased_in_month": 5.0,
+      "total_consumed_hours": 4.0,
+      "hours_expired_unused_in_month": 1.0,
+      "closing_balance_hours": 4.0,
+      "overdraft_hours": 0.0,
+      "notes": "Supersedes revision 2: recomputed from source data because underlying consumption changed for this period.",
+      "lines": [
+        {
+          "worked_on": "2026-02-15",
+          "consumption_entry": "CE-00007",
+          "purchased_block": "PB-00006",
+          "block_expiry_date": "2026-02-20",
+          "hours_allocated": 5.0,
+          "sequence": 1,
+          "is_correction": 0,
+          "is_overdraft": 0
+        },
+        {
+          "worked_on": "2026-02-15",
+          "consumption_entry": "CE-00007",
+          "purchased_block": "PB-00002",
+          "block_expiry_date": "2026-03-31",
+          "hours_allocated": 2.0,
+          "sequence": 2,
+          "is_correction": 0,
+          "is_overdraft": 0
+        },
+        {
+          "worked_on": "2026-02-18",
+          "consumption_entry": "CE-00010",
+          "purchased_block": "PB-00002",
+          "block_expiry_date": "2026-03-31",
+          "hours_allocated": -2.0,
+          "sequence": 1,
+          "is_correction": 1,
+          "is_overdraft": 0
+        },
+        {
+          "worked_on": "2026-02-18",
+          "consumption_entry": "CE-00010",
+          "purchased_block": "PB-00006",
+          "block_expiry_date": "2026-02-20",
+          "hours_allocated": -1.0,
+          "sequence": 2,
+          "is_correction": 1,
+          "is_overdraft": 0
+        }
+      ]
+    }
+  ],
+  "march_statement_history": [
+    {
+      "name": "STMT-00017",
+      "client": "Sample Client Acme Corp",
+      "year": 2026,
+      "month": 3,
+      "revision": 1,
+      "is_latest": 1,
+      "previous_revision": null,
+      "superseded_by": null,
+      "opening_balance_hours": 4.0,
+      "hours_purchased_in_month": 2.0,
+      "total_consumed_hours": 10.0,
+      "hours_expired_unused_in_month": 0.0,
+      "closing_balance_hours": 0.0,
+      "overdraft_hours": 4.0,
+      "notes": "Initial statement, generated from source data.",
+      "lines": [
+        {
+          "worked_on": "2026-03-05",
+          "consumption_entry": "CE-00016",
+          "purchased_block": "PB-00015",
+          "block_expiry_date": "2026-03-10",
+          "hours_allocated": 2.0,
+          "sequence": 1,
+          "is_correction": 0,
+          "is_overdraft": 0
+        },
+        {
+          "worked_on": "2026-03-05",
+          "consumption_entry": "CE-00016",
+          "purchased_block": "PB-00002",
+          "block_expiry_date": "2026-03-31",
+          "hours_allocated": 4.0,
+          "sequence": 2,
+          "is_correction": 0,
+          "is_overdraft": 0
+        },
+        {
+          "worked_on": "2026-03-05",
+          "consumption_entry": "CE-00016",
+          "purchased_block": null,
+          "block_expiry_date": null,
+          "hours_allocated": 4.0,
+          "sequence": 3,
+          "is_correction": 0,
+          "is_overdraft": 1
+        }
+      ]
+    }
+  ],
+  "final_purchased_block_balances": [
+    {
+      "reference": "PB-A: Jan block, expires end of Jan",
+      "hours_purchased": 4.0,
+      "hours_remaining": 0.0
+    },
+    {
+      "reference": "PB-B: Q1 block, plenty of runway",
+      "hours_purchased": 6.0,
+      "hours_remaining": 0.0
+    },
+    {
+      "reference": "PB-C: bought Feb 10th (after PB-A/PB-B) but expires Feb 20th, earlier than PB-B",
+      "hours_purchased": 5.0,
+      "hours_remaining": 1.0
+    },
+    {
+      "reference": "PB-D: small block, expires early March",
+      "hours_purchased": 2.0,
+      "hours_remaining": 0.0
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "hash",
+ "creation": "2026-09-05 00:00:00.000000",
+ "doctype": "DocType",
+ "document_type": "",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "client",
+  "consumption_entry",
+  "purchased_block",
+  "column_break_1",
+  "block_expiry_date",
+  "hours_allocated",
+  "sequence",
+  "is_overdraft"
+ ],
+ "fields": [
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Client",
+   "options": "Customer",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "consumption_entry",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Consumption Entry",
+   "options": "HL Consumption Entry",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "description": "Blank when is_overdraft is checked: this row represents hours that no unexpired block could cover, not a draw from any block.",
+   "fieldname": "purchased_block",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Purchased Block",
+   "options": "HL Purchased Block",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Snapshot of the block's expiry date at allocation time, for a stable history even though blocks are also immutable once used.",
+   "fieldname": "block_expiry_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Block Expiry Date",
+   "read_only": 1
+  },
+  {
+   "description": "Positive = hours drawn from this block. Negative = hours restored to this block by a correction.",
+   "fieldname": "hours_allocated",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Hours Allocated",
+   "precision": "2",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "description": "Order in which this row was produced within its consumption entry's split, for deterministic display.",
+   "fieldname": "sequence",
+   "fieldtype": "Int",
+   "label": "Sequence",
+   "read_only": 1
+  },
+  {
+   "description": "Checked when this row is the unmet shortfall of a consumption entry (no unexpired block could cover it), not a draw from purchased_block.",
+   "fieldname": "is_overdraft",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Is Overdraft",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-09-05 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Hour log for cleints",
+ "name": "HL Allocation",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 0,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 0,
+   "write": 0
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,104 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "format:CE-{#####}",
+ "creation": "2026-09-05 00:00:00.000000",
+ "doctype": "DocType",
+ "document_type": "",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "client",
+  "worked_on",
+  "column_break_1",
+  "hours",
+  "is_correction",
+  "reverses",
+  "section_break_1",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Client",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "description": "The date the work was actually performed, not the date this entry was created. This is what backdated (retroactive) entries key off. See README: Edge Case 1.",
+   "fieldname": "worked_on",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Worked On",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Positive = normal consumption. Negative = a correction that must reference the entry it corrects (Reverses). Zero is a valid no-op entry (e.g. a logged-but-billable-zero activity).",
+   "fieldname": "hours",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Hours",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_correction",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Correction",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.hours < 0 || doc.reverses",
+   "description": "Required when Hours is negative. The engine restores hours only to the exact blocks that this original entry actually drew from — never to an arbitrary block. See README: Edge Case 4.",
+   "fieldname": "reverses",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Reverses (Correction Of)",
+   "options": "HL Consumption Entry"
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-09-05 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Hour log for cleints",
+ "name": "HL Consumption Entry",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
